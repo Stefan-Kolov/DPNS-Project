@@ -3,16 +3,12 @@ import dlib
 from imutils import face_utils
 from scipy.spatial import distance as dist
 
-# Земи го детекторот за лице од dlib
+
 detector = dlib.get_frontal_face_detector()
-# Земи го предикторот за точки на лице од shape_predictor_68_face_landmarks.dat
 predictor = dlib.shape_predictor('Items/shape_predictor_68_face_landmarks.dat')
 
-# EAR threshold and consecutive frames threshold
 EAR_THRESHOLD = 0.25
 CONSEC_FRAMES = 20
-
-# Initialize counters
 frame_counter = 0
 
 
